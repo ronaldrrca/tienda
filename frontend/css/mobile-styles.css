@@ -1,0 +1,210 @@
+:root {
+    --rosa-nude: #E3B7A0; /*Fondo de secciones, botones secundarios, toques en imágenes.*/
+    --verde-salvia: #A8B5A2; /*Detalles sutiles, íconos o fondos de secciones especiales.*/
+    --dorado: #C4A484; /*Botones principales, detalles elegantes, líneas divisorias.*/
+    --negro-carbon: #1E1E1E; /*Texto principal, títulos, contraste con los tonos claros.*/
+    --blanco-marfil: #F8F5F2; /*Fondo principal, tarjetas de productos, espacios vacíos.*/
+}
+
+/**Estilos generales**/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0 auto;
+    background-color: var(--blanco-marfil);
+    color: var(--negro-carbon);
+    font-family: 'Poppins', sans-serif; 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 50rem;
+    max-width: 150rem;
+    padding-top: 6rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    background-color: #1E1E1E;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: #1E1E1E;
+}
+
+h1, h2 {
+    font-family: serif;
+}
+
+h1, h2, h3 {
+    color: var(--negro-carbon);
+}
+
+h1 { 
+    font-size: 2rem; 
+    font-weight: 700; 
+    text-align: center;
+}
+
+h2 { 
+    font-size: 1.75rem;
+    font-weight: 600; 
+}
+
+h3 { 
+    font-size: 1.5rem;
+    font-weight: 600; 
+}
+
+h4 { 
+    font-size: 1.25rem;
+    font-weight: 500; 
+}
+
+h5 { 
+    font-size: 1.125rem;
+    font-weight: 500; 
+}
+
+h6 { 
+    font-size: 1rem;
+    font-weight: 500; 
+}
+
+button {
+    background-color: var(--dorado);
+    color: var(--negro-carbon);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+/**Estilos del menú**/
+#menu-lista {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu-lista-item {
+    width: 15.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #FFFFFF;
+}
+
+#menu-lista li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-nombreTienda {
+    font-size: 3rem;
+    color: #FFFFFF;
+}
+
+#menu-icono-cerrar {
+    width: 3rem;
+    display: flex;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+#menu-icono-menu {
+    width: 5rem;
+}
+
+#menu-icono-carrito {
+    width: 3rem;
+}
+
+#menu-contenedor-carrito{
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#item-carrito {
+    display: inline-flex;
+}
+
+nav {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: green;
+}
+
+
+/**Estilos del main**/
+.frase-especial {
+    width: 100%;
+    padding: 0 1rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+/**Estilos del footer**/
+footer p{
+    font-size: 1.6rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#footer-contenedoIconos-redesSociales {
+    display: flex;
+    padding: 1rem 1rem 0 1rem;
+    gap: 2rem;
+}
+
+#footer-contenedoIconos-redesSociales img{
+    width: 3rem;
+}
+
+

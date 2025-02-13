@@ -1,0 +1,72 @@
+
+/**Estilos generales**/h1 {
+    font-size: 3rem;
+}
+
+h2 { 
+    font-size: 2.5rem;
+}
+
+h3 { 
+    font-size: 2rem;
+}
+
+h4 { 
+    font-size: 1.75rem;
+}
+
+h5 { 
+    font-size: 1.5rem;
+}
+
+h6 { 
+    font-size: 1.25rem;
+}
+
+button:hover {
+    background-color: var(--rosa-nude);
+}
+
+
+/**Estilos del menú**/
+#menu-lista {
+    flex-direction: row;
+    padding: 0;
+    gap: 2rem;
+}
+
+.menu-lista-item {
+    padding: 1rem 0.5rem;
+    font-size: 2rem;
+}
+
+#item-carrito {
+    display: none;
+}
+
+#menu-contenedor-carrito {
+    display: flex;
+}
+
+#menu-icono-menu {
+    display: none;
+}
+
+.menu-lista-item {
+    width: unset;
+}
+
+#menu-icono-cerrar {
+    display: none;
+}
+
+nav {position: relative;
+    width: auto;
+    display: flex;
+    gap: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+
+/**Estilos del main**/

@@ -1,4 +1,3 @@
-<?php include './backend/conexion.php'  ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -28,12 +27,10 @@
 <body>
     <?php include './frontend/includes-front/header.php'?>
     <main>
-        <span class="frase-especial">Los mejores productos de maquillaje están aquí <br>¡Encuentra tus favoritos!</span>
-        <h1>Productos Destacados</h1>
-        
+
     </main>
     <?php include './frontend/includes-front/footer.php'?>
-    <script src="frontend/js/index,js"></script>
+    
     <script src="frontend/js/header.js"></script>
 </body>
 </html>
