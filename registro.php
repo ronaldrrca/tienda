@@ -26,10 +26,35 @@
 </head>
 <body>
     <?php include './frontend/includes-front/header.php'?>
-    <main>
-
+    <main id="main-registro">
+    <h1>Regístrate en Nuestra Tienda</h1>
+        <form id="formulario-registro-cliente" action="./backend/clients/registo-back.php" METHOD="POST">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" required>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <label for="telefono">Teléfono</label>
+            <input type="tel" name="telefono" id="teléfono" placeholder="Télefono de contacto">
+            <label for="direccion">Dirección</label>
+            <input type="text" name="direccion" id="dirección" placeholder="Dirección (Importante para envíos)">
+            <div id="passwords">
+                <div class="password-container">
+                <label for="password">Contraseña</label>
+                    <input type="password" name="password" id="password_repetir" placeholder="Contraseña" required>
+                    <button type="button" id="togglePassword">👁️</button>
+                </div>
+                <div class="password-container">
+                <label for="password_repetir">Repita la contraseña</label>
+                    <input type="password" name="password_repetir" id="password" placeholder="Repita la contraseña" required>
+                    <button type="button" id="togglePasswordRepetir">👁️</button>
+                </div>
+            </div>
+            
+            <input type="submit" value="Registrarse">
+        </form>
     </main>
     <?php include './frontend/includes-front/footer.php'?>
     <script src="frontend/js/header.js"></script>
+    <script src="frontend/js/registro.js"></script>
 </body>
 </html>

@@ -30,7 +30,7 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: 42rem;
+    min-height: 60rem;
     max-width: 150rem;
     margin-top: 6rem;
     padding: 0 2rem;
@@ -48,6 +48,7 @@ header {
     align-items: center;
     padding: 0 2rem;
     background-color: #1E1E1E;
+    z-index: 2000;
 }
 
 footer {
@@ -109,7 +110,7 @@ button, input[type='submit']
     transition: all 0.3s;
 }
 
-#formulario-login-cliente input[type='submit'] {
+#formulario-login-cliente input[type='submit'], #ulario-registro-cliente input[type='submit'] {
     margin-top: 2rem;
 }
 
@@ -197,12 +198,12 @@ nav {
     text-align: center;
 }
 
-#main-login {
+#main-login, #main-registro {
     justify-content: center;
     gap: 3rem;
 }
 
-#formulario-login-cliente {
+#formulario-login-cliente, #formulario-registro-cliente {
     width: 100%;
     max-width: 40rem;
     display: flex;
@@ -221,8 +222,17 @@ label {
     font-size: 1.4rem;
 }
 
+::placeholder {
+    color: #B0B0B0; /* Gris claro */
+    opacity: 1; /* Asegura que el color sea visible en algunos navegadores */
+}
+
+
 input[type= 'text'],
-input[type= 'password'] {
+input[type= 'password'],
+input[type= 'tel'],
+input[type= 'email'] {
+    width: 100%;
     background-color: #FBF9F6;
     padding: 10px 14px;
     margin-bottom: 1.5rem;
@@ -233,22 +243,66 @@ input[type= 'password'] {
 }
 
 #resultado-login {
-    position: absolute;  
-    top: 10px; 
-    left: 50%;
-    transform: translateX(-50%);
-    font-weight: bold;
+    position: absolute;
     color: #FFFFFF;
     font-size: 2rem;
-    padding: 10px 20px;
+    text-align: center;
+    padding: 0;
     border-radius: 5px;
     display: none;  
     z-index: 1000;  
-    
 }
 
 .mostrar {
     display: block;  /* Clases para mostrar el mensaje */
+}
+
+
+/**Codigo para el campo de password**/
+
+#passwords {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.password-container button {
+    width: 3rem;
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.password-container button:hover,
+.password-container button:focus {
+    background: none;
+    outline: none;
+}
+
+#login-registrarse {
+    display: flex;
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    color: #1E1E1E;
+    text-underline-offset: 4px;
+    transition: all 0.4s;
+}
+
+
+#login-registrarse:hover {
+    color: blue;
 }
 
 

@@ -1,15 +1,7 @@
 <?php
 session_start();
 header("Content-Type: application/json");
-
-// Configuración de conexión a la base de datos
-$host = "localhost"; //Servidor 
-$dbname = "tienda";
-$username = "root";
-$password = "";
-
-// Conexión con MySQLi
-$conexion = new mysqli($host, $username, $password, $dbname);
+require_once '../conexion.php';
 
 // Verificar conexión
 if ($conexion->connect_error) {

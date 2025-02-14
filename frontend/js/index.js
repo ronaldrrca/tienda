@@ -4,11 +4,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (mensaje) {
         let resultadoLogin = document.getElementById("resultado-login");
-        if (resultadoLogin) {
-            resultadoLogin.textContent = mensaje;
-            resultadoLogin.style.backgroundColor = "green";
-            resultadoLogin.style.display = "block";
+            function mostrarMensaje() {
+                resultadoLogin.textContent = mensaje;
+                resultadoLogin.style.backgroundColor = "green";
+                resultadoLogin.style.display = "block";
+                resultadoLogin.style.padding = "1rem 2rem";
+                resultadoLogin.style.color = "#FFFFFF";
+                resultadoLogin.style.top = "10px";
+                resultadoLogin.style.left = "50%";
+                resultadoLogin.style.translate = "-50%";
+            }
 
+        if (resultadoLogin) {
+             mostrarMensaje();
             // Eliminar el mensaje después de unos segundos
             setTimeout(() => {
                 resultadoLogin.style.transition = "opacity 1s ease-out"; // Transición suave
