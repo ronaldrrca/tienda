@@ -1,3 +1,4 @@
+<?php session_start();?>
 <header>
     <span id="header-nombreTienda">Mi tienda</span>
     <img onclick="abrirMenu()" id="menu-icono-menu" src="assets/imgs-site/menu-icono.svg" alt="ícono de cerra menú">
@@ -15,10 +16,13 @@
                     </div>
                 </a>
             </li>
-            <li><a class="menu-lista-item" href="login.php">Iniciar sesión</a></li>
+            <?php if (isset($_SESSION["nombre_cliente"])) { ?><!--Verificamos si hay una sesión activa-->
+                <li><a class="menu-lista-item" href="./backend/authentications/logout.php">Cerrar sesión</a></li>
+            <?php } else { ?>
+                <li><a class="menu-lista-item" href="login-cliente.php">Iniciar sesión</a></li>
+            <?php } ?>
             <li><a class="menu-lista-item" href="registro.php">Registrarse</a></li>
             <li><a class="menu-lista-item" href="admin-login.php">Admin</a></li>
-
         </ul>
     </nav>
 </header>

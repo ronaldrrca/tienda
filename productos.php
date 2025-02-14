@@ -27,9 +27,10 @@
 <body>
     <?php include './frontend/includes-front/header.php'?>
     <main>
-
+        <div class="resultado-login"></div>
     </main>
     <?php include './frontend/includes-front/footer.php'?>
     <script src="frontend/js/header.js"></script>
+    
 </body>
 </html>

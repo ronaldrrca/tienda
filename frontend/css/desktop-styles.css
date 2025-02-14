@@ -1,3 +1,10 @@
+:root {
+    --rosa-nude: #E3B7A0; /*Fondo de secciones, botones secundarios, toques en imágenes.*/
+    --verde-salvia: #A8B5A2; /*Detalles sutiles, íconos o fondos de secciones especiales.*/
+    --dorado: #C4A484; /*Botones principales, detalles elegantes, líneas divisorias.*/
+    --negro-carbon: #1E1E1E; /*Texto principal, títulos, contraste con los tonos claros.*/
+    --blanco-marfil: #F8F5F2; /*Fondo principal, tarjetas de productos, espacios vacíos.*/
+}
 
 /**Estilos generales**/h1 {
     font-size: 3rem;
@@ -23,8 +30,10 @@ h6 {
     font-size: 1.25rem;
 }
 
-button:hover {
-    background-color: var(--rosa-nude);
+button:hover, input[type='submit']:hover {
+    background-color: #1E1E1E;
+    color: var(--dorado);
+    
 }
 
 

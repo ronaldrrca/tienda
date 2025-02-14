@@ -27,9 +27,18 @@
 <body>
     <?php include './frontend/includes-front/header.php'?>
     <main id="main-login">
-        
+        <h1>Inicio de sesión</h1>
+        <form id="formulario-login-cliente" METHOD="POST" display: none;>
+            <label for="email">Usuario</label>
+            <input type="text" name="email" id="email" placeholder="Email">
+            <label for="password">Contraseña</label>
+            <input type="password" name="password" id="password" placeholder="Contraseña">
+            <input type="submit" value="Ingresar">
+        </form>
+        <div id="resultado-login" ></div>
     </main>
     <?php include './frontend/includes-front/footer.php'?>
     <script src="frontend/js/header.js"></script>
+    <script src="frontend/js/login-cliente.js"></script>
 </body>
 </html>
