@@ -159,7 +159,7 @@ button, input[type='submit']
     width: 5rem;
 }
 
-#menu-icono-carrito {
+#menu-icono-carrito, #menu-icono-usuario {
     width: 3rem;
 }
 
@@ -169,6 +169,11 @@ button, input[type='submit']
     height: 3rem;
     justify-content: center;
     align-items: center;
+}
+
+.tooltip {
+    display: none;
+    
 }
 
 #item-carrito {

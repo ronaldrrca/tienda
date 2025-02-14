@@ -18,10 +18,16 @@
             </li>
             <?php if (isset($_SESSION["nombre_cliente"])) { ?><!--Verificamos si hay una sesión activa-->
                 <li><a class="menu-lista-item" href="./backend/authentications/logout.php">Cerrar sesión</a></li>
+                 <li>
+                    <div class="tooltip">
+                        <img class="user-icon" src="./assets/imgs-site/usuario-icono.svg" alt="ícono de usuario">
+                        <span class="tooltip-text"><?php echo $_SESSION["nombre_cliente"]?></span>
+                     </div>
+                </li>
             <?php } else { ?>
                 <li><a class="menu-lista-item" href="login-cliente.php">Iniciar sesión</a></li>
+                <li><a class="menu-lista-item" href="registro.php">Registrarse</a></li>
             <?php } ?>
-            <li><a class="menu-lista-item" href="registro.php">Registrarse</a></li>
             <li><a class="menu-lista-item" href="admin-login.php">Admin</a></li>
         </ul>
     </nav>

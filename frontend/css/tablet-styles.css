@@ -29,5 +29,9 @@ h6 {
     font-size: 1.8rem;
 }
 
+.tooltip {
+    display: none;
+}
+
 
 /**Estilos del main**/

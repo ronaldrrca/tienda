@@ -78,4 +78,54 @@ nav {position: relative;
 }
 
 
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip-text {
+    display: flex;
+    visibility: hidden;
+    /* width: 15rem; */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 6px;
+    border-radius: 5px;
+    font-size: 14px;
+    justify-content: center;
+    min-width: 25rem; /* Se expande si el texto es más largo */
+    max-width: 30rem; /* Evita que sea demasiado ancho */
+    white-space: normal; /* Permite saltos de línea */
+
+    /* Posición */
+    position: absolute;
+    bottom: -4.7rem;
+    left: 50%;
+    transform: translateX(-50%);
+         
+    /* Animación */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Flecha del tooltip */
+.tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    bottom: 2.4rem;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: red transparent transparent transparent;
+}
+
+/* Mostrar tooltip al hacer hover */
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
 /**Estilos del main**/

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "..//conexion.php"; 
+require_once "../conexion.php"; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = trim($_POST["nombre"]);
@@ -36,8 +36,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sssss", $nombre, $email, $telefono, $direccion, $passwordHasheada);
 
     if ($stmt->execute()) {
-        $_SESSION["mensaje"] = "Cliente registrado con éxito.";
-        header("Location: ../../login-cliente.js.php");
+        // Obtener el ID del cliente recién registrado
+        $id_cliente = $conexion->insert_id;
+
+        // Iniciar sesión automáticamente
+        $_SESSION["id_cliente"] = $id_cliente;
+        $_SESSION["nombre_cliente"] = $nombre;
+        $_SESSION["email_cliente"] = $email;
+
+        $_SESSION["mensaje"] = "Bienvenido, $nombre. Tu cuenta ha sido creada exitosamente.";
+        header("Location: ../../index.php"); // Redirigir al panel del cliente
+        exit();
     } else {
         $_SESSION["error"] = "Hubo un error al registrar el cliente.";
         header("Location: formulario_cliente.php");
