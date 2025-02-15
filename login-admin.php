@@ -27,8 +27,19 @@
 </head>
 <body>
     <?php include './frontend/includes-front/header.php'?>
-    <main>
-
+    <main id="main-login">
+        <h1>Inicio de sesión</h1>
+        <form id="formulario-login-admin" METHOD="POST">
+            <label for="usuario">Usuario</label>
+            <input type="text" name="usuario" id="usuario" placeholder="Usuario">
+            <div class="password-container">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" placeholder="Contraseña">
+                <button type="button" id="togglePassword">👁️</button>
+                <div id="resultado-login" ></div>
+            </div>
+            <input type="submit" value="Ingresar">
+        </form>
     </main>
     <?php include './frontend/includes-front/footer.php'?>
     <script src="frontend/js/header.js"></script>

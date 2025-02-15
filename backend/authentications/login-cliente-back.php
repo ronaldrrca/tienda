@@ -31,8 +31,11 @@ if ($usuario && password_verify($password, $usuario["password_cliente"])) {
     // Iniciar sesión con los datos del usuario
     $_SESSION["id_cliente"] = $usuario["id_cliente"];
     $_SESSION["nombre_cliente"] = $usuario["nombre_cliente"];
+    // Obtener la URL de redirección y luego eliminar la sesión
+    $redirect_to = $_SESSION["redirect_to"] ?? "index.php";
+    unset($_SESSION["redirect_to"]); 
 
-    echo json_encode(["status" => "success", "message" => "Inicio de sesión exitoso"]);
+    echo json_encode(["status" => "success", "message" => "Inicio de sesión exitoso", "redirect_to" => $redirect_to]);
 } else {
     echo json_encode(["status" => "error", "message" => "Email y/o contraseña incorrectos"]);
 }

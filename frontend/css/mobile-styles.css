@@ -208,7 +208,7 @@ nav {
     gap: 3rem;
 }
 
-#formulario-login-cliente, #formulario-registro-cliente {
+#formulario-login-cliente, #formulario-registro-cliente, #formulario-login-admin {
     width: 100%;
     max-width: 40rem;
     display: flex;

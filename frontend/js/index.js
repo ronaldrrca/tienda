@@ -1,34 +1,32 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     let mensaje = sessionStorage.getItem("loginMessage");
-    let status = sessionStorage.getItem("loginStatus");
+    let resultadoLogin = document.getElementById("resultado-login");
 
-    if (mensaje) {
-        let resultadoLogin = document.getElementById("resultado-login");
-            function mostrarMensaje() {
-                resultadoLogin.textContent = mensaje;
-                resultadoLogin.style.backgroundColor = "green";
-                resultadoLogin.style.display = "block";
-                resultadoLogin.style.padding = "1rem 2rem";
-                resultadoLogin.style.color = "#FFFFFF";
-                resultadoLogin.style.top = "10px";
-                resultadoLogin.style.left = "50%";
-                resultadoLogin.style.translate = "-50%";
-            }
+    if (mensaje && resultadoLogin) {
+        // Eliminar inmediatamente del sessionStorage
+        sessionStorage.removeItem("loginMessage");
+        sessionStorage.removeItem("loginStatus");
 
-        if (resultadoLogin) {
-             mostrarMensaje();
-            // Eliminar el mensaje después de unos segundos
+        // Mostrar mensaje
+        resultadoLogin.textContent = mensaje;
+        resultadoLogin.style.backgroundColor = "green";
+        resultadoLogin.style.display = "block";
+        resultadoLogin.style.padding = "1rem 2rem";
+        resultadoLogin.style.color = "#FFFFFF";
+        resultadoLogin.style.position = "absolute"; // Se agrega por claridad
+        resultadoLogin.style.top = "10px";
+        resultadoLogin.style.left = "50%";
+        resultadoLogin.style.transform = "translateX(-50%)"; // Corrección: `translateX` en vez de `translate`
+
+        // Desvanecer mensaje después de 3 segundos
+        setTimeout(() => {
+            resultadoLogin.style.transition = "opacity 1s ease-out";
+            resultadoLogin.style.opacity = "0";
+
+            // Esperar la transición y ocultarlo completamente
             setTimeout(() => {
-                resultadoLogin.style.transition = "opacity 1s ease-out"; // Transición suave
-                resultadoLogin.style.opacity = "0"; // Desvanecer
-            
-                setTimeout(() => {
-                    resultadoLogin.style.display = "none"; // Ocultarlo después del fade-out
-                    sessionStorage.removeItem("loginMessage");
-                    sessionStorage.removeItem("loginStatus");
-                }, 1000); // Espera que termine la animación antes de ocultarlo completamente
-            }, 3000); // Espera 3 segundos antes de iniciar el fade-out
-            
-        }
+                resultadoLogin.style.display = "none";
+            }, 1000);
+        }, 3000);
     }
 });

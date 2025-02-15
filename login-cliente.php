@@ -29,8 +29,8 @@
     <main id="main-login">
         <h1>Inicio de sesión</h1>
         <form id="formulario-login-cliente" METHOD="POST">
-            <label for="email">Usuario</label>
-            <input type="text" name="email" id="email" placeholder="Email">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email">
             <div class="password-container">
                 <label for="password">Contraseña</label>
                 <input type="password" name="password" id="password" placeholder="Contraseña">

@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             let formData = new FormData(this);
 
-            fetch("./backend/authentications/login-back.php", {
+            fetch("./backend/authentications/login-cliente-back.php", {
                 method: "POST",
                 body: formData
             })
@@ -34,7 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (data.status === "success") {
                     sessionStorage.setItem("loginMessage", data.message); // Guardar mensaje
                     sessionStorage.setItem("loginStatus", "success");
-                    window.location.href = "index.php";
+                    // Redireccionar a la página correcta
+                    window.location.href = data.redirect_to;
                                        
                 } else {
                     mostrarMensaje();    

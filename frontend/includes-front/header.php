@@ -28,7 +28,7 @@
                 <li><a class="menu-lista-item" href="login-cliente.php">Iniciar sesión</a></li>
                 <li><a class="menu-lista-item" href="registro.php">Registrarse</a></li>
             <?php } ?>
-            <li><a class="menu-lista-item" href="admin-login.php">Admin</a></li>
+            <li><a class="menu-lista-item" href="login-admin.php">Admin</a></li>
         </ul>
     </nav>
 </header>

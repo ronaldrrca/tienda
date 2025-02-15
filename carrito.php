@@ -1,6 +1,4 @@
-<?php
-require_once './backend/authentications/auth.php';
-?>
+<?php require_once './backend/authentications/auth.php'; ?>
 
 <!DOCTYPE html>
 <html lang="es">
