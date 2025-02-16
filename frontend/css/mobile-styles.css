@@ -30,7 +30,7 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: 60rem;
+    min-height: calc(100vh - 13.8rem);
     max-width: 150rem;
     margin-top: 6rem;
     padding: 0 2rem;
@@ -99,6 +99,8 @@ h6 {
     font-weight: 500; 
 }
 
+
+
 button, input[type='submit']
  {
     background-color: var(--dorado);
@@ -110,8 +112,67 @@ button, input[type='submit']
     transition: all 0.3s;
 }
 
-#formulario-login-cliente input[type='submit'], #ulario-registro-cliente input[type='submit'] {
+#formulario-login-cliente input[type='submit'], 
+#ulario-registro-cliente input[type='submit'],
+#formAgregarUsuarioinput[type='submit'] {
     margin-top: 2rem;
+}
+
+#contenido-usuarios{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+#contenedor-formulario-usuario {
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: var(--blanco-marfil);
+    z-index: 1000;
+}
+
+#contenedor-tablaUsuarios {
+    gap: 2rem;
+    max-height: 300px; /* Ajusta la altura máxima */
+    overflow-y: auto; /* Agrega el scroll vertical */
+    display: block; /* Necesario para que max-height funcione */
+    border: 1px solid #ccc; /* Opcional, solo para visualizar los límites */
+    position: relative;
+}
+
+#contenedor-tablaUsuarios h2 {
+    text-align: center;
+    position: sticky;
+    top: 0; /* Se mantiene pegado en la parte superior */
+    background-color: white; /* Evita que el texto se solape con las filas */
+    padding: 0.5rem;
+    z-index: 10; /* Asegura que quede por encima del contenido */
+    border-bottom: 2px solid #ccc; /* Opción para mejorar la visual */
+    background-color: var(--blanco-marfil);
+}
+
+table {
+    width: 100%; /* Para que la tabla ocupe todo el contenedor */
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+
+#contenedor-formulario-usuario h2 {
+    text-align: center;
+    padding: 0.5rem;
 }
 
 
@@ -142,7 +203,8 @@ button, input[type='submit']
     align-items: center;
 }
 
-#header-nombreTienda {
+.header-nombreTienda {
+    text-decoration: none;
     font-size: 3rem;
     color: #FFFFFF;
 }
@@ -203,12 +265,12 @@ nav {
     text-align: center;
 }
 
-#main-login, #main-registro {
+#main-login, #main-registro, #main-adminPanel {
     justify-content: center;
     gap: 3rem;
 }
 
-#formulario-login-cliente, #formulario-registro-cliente, #formulario-login-admin {
+#formulario-login-cliente, #formulario-registro-cliente, #formulario-login-admin, #formAgregarUsuario {
     width: 100%;
     max-width: 40rem;
     display: flex;
@@ -219,7 +281,19 @@ nav {
     border: 1px solid var(--dorado);
     border-radius: 8px;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05);
+    margin: auto;
 }
+
+#botones-formularioUsuario {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#botones-formularioUsuario button {
+    width: 100%;
+}
+
 
 label {
     margin-bottom: 0.4rem;
@@ -236,7 +310,8 @@ label {
 input[type= 'text'],
 input[type= 'password'],
 input[type= 'tel'],
-input[type= 'email'] {
+input[type= 'email'],
+select {
     width: 100%;
     background-color: #FBF9F6;
     padding: 10px 14px;
@@ -260,6 +335,41 @@ input[type= 'email'] {
 
 .mostrar {
     display: block;  /* Clases para mostrar el mensaje */
+}
+
+/*Estilos específicos del header del admin panel*/
+#header-admin-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1E1E1E;
+}
+
+#header-adminPanel-cerrarsesion {
+    padding: 1rem;
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    text-decoration: none;
+
+}
+
+#header-admin-panel h1{
+    color: #FFFFFF;
+    display: none;
+    font-size: 2rem;
+}
+
+.usuario-info {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+}
+.gestiones {
+    display: flex;
+    gap: 10px;
 }
 
 

@@ -127,4 +127,25 @@ nav {position: relative;
     opacity: 1;
 }
 
+#nombre-admin {
+    display: block;
+}
+
+#header-admin-panel h1, .usuario-info{
+    display: flex;
+    gap: 0.5rem;
+}
+
 /**Estilos del main**/
+
+#botones-formularioUsuario {
+    flex-direction: row;
+}
+
+#botones-formularioUsuario button {
+    width: 50%;
+}
+
+#contenedor-formulario-usuario {
+    display: flex;
+}

@@ -46,5 +46,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     togglePassword.addEventListener("click", () => togglePasswordVisibility(document.getElementById("password"), togglePassword));
-    togglePasswordRepetir.addEventListener("click", () => togglePasswordVisibility(document.getElementById("password_repetir"), togglePasswordRepetir));
+    togglePasswordRepetir.addEventListener("click", () => togglePasswordVisibility(document.getElementById("confirm_password"), togglePasswordRepetir));
 });

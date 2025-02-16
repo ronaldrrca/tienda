@@ -18,7 +18,7 @@
     <link rel="canonical" href="https://www.tutienda.com/pagina-principal">
     <meta name="description" content="Descubre los mejores productos al mejor precio. Envíos rápidos, ofertas exclusivas y una experiencia de compra fácil y segura. ¡Compra ahora!">
     <title>Tu Tienda Online | Productos de Calidad al Mejor Precio</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/imgs-site/favicon.ico" type="image/x-icon">
     <!--Estilos css-->
     <link rel="stylesheet" href="./frontend/css/mobile-styles.css" media="screen and (min-width: 360px)">
     <link rel="stylesheet" href="./frontend/css/tablet-styles.css" media="screen and (min-width: 768px)">

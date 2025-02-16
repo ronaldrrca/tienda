@@ -35,3 +35,6 @@ h6 {
 
 
 /**Estilos del main**/
+#contenedor-formulario-usuario {    
+    display: none;
+}

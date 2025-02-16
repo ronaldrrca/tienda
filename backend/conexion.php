@@ -15,4 +15,5 @@ if ($conexion->connect_error) {
 // Establecer codificación de caracteres
 $conexion->set_charset("utf8");
 
+
 ?>
