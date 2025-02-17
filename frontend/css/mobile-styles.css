@@ -30,7 +30,7 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: calc(100vh - 13.8rem);
+    min-height: 100vh;
     max-width: 150rem;
     margin-top: 6rem;
     padding: 0 2rem;
@@ -106,7 +106,8 @@ button, input[type='submit']
     background-color: var(--dorado);
     color: var(--negro-carbon);
     border: none;
-    padding: 10px 20px;
+    width: 10rem;
+    height: 3.5rem;
     cursor: pointer;
     font-weight: bold;
     transition: all 0.3s;
@@ -284,6 +285,12 @@ nav {
     margin: auto;
 }
 
+#formAgregarUsuario #error-message {
+    display: none;
+    color: red;
+    font-size: 1.4rem;
+}
+
 #botones-formularioUsuario {
     display: flex;
     flex-direction: column;
@@ -293,7 +300,6 @@ nav {
 #botones-formularioUsuario button {
     width: 100%;
 }
-
 
 label {
     margin-bottom: 0.4rem;
@@ -347,7 +353,6 @@ select {
 }
 
 #header-adminPanel-cerrarsesion {
-    padding: 1rem;
     color: #FFFFFF;
     font-size: 1.4rem;
     text-decoration: none;

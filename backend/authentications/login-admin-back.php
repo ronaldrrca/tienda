@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Verificar la contraseña
         if (password_verify($password, $usuario["password_usuario"])) {
             $_SESSION["id_usuario"] = $usuario["id_usuario"];
-            $_SESSION["admin"] = $usuario["nombre_usuario"];
+            $_SESSION["nombre_usuario"] = $usuario["nombre_usuario"];
             $_SESSION["rol_usuario"] = $usuario["rol_usuario"];
             header("Location: ../../admin-panel.php");
             exit();

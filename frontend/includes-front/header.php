@@ -1,6 +1,6 @@
 <?php session_start();?>
 <header>
-    <span id="header-nombreTienda">Mi tienda</span>
+    <span class="header-nombreTienda">Mi tienda</span>
     <img onclick="abrirMenu()" id="menu-icono-menu" src="assets/imgs-site/menu-icono.svg" alt="ícono de cerra menú">
     <nav id="menu">
         <img onclick="cerrarMenu()" id="menu-icono-cerrar" src="assets/imgs-site/cerrar-menu-icono.svg" alt="ícono de cerra menú">

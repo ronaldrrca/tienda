@@ -31,7 +31,7 @@ require './backend/users/gestion-usuarios-back.php'; // Conectar a la base de da
             <button type="submit">Agregar Usuario</button>
             <button type="button" onclick="cancelarFormularioUsuario()">Cancelar</button>
         </div>
-        <span id="error-message" style="color: red; display: none;">Las contraseñas no coinciden</span>
+        <span id="error-message"></span>
     </form>
 </div>
 
@@ -52,13 +52,13 @@ require './backend/users/gestion-usuarios-back.php'; // Conectar a la base de da
             <td><?php echo $fila['usuario_usuario']?></td>
             <td><?php echo $fila['rol_usuario']?></td>
             <td>
-                <button onclick='editarUsuario(<?php echo $fila["id_usuario"]?>)'>Editar</button>
-                <button onclick='eliminarUsuario(<?php echo $fila["id_usuario"]?>)'>Eliminar</button>
+                <button onclick="eliminarUsuario(<?php echo $fila['id_usuario']; ?>, '<?php echo addslashes($fila['nombre_usuario']); ?>')">Eliminar</button>
+                <button onclick="editarUsuario(<?php echo $fila['id_usuario']; ?>, '<?php echo addslashes($fila['nombre_usuario']); ?>')">Editar</button>
             </td>
         </tr>
         <?php } ?>
     </table>
-</div>
+        </div>
 <button onclick="mostrarFormularioUsuario()">Nuevo usuario</button>
 
     

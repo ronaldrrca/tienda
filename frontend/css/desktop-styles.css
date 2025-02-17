@@ -133,7 +133,12 @@ nav {position: relative;
 
 #header-admin-panel h1, .usuario-info{
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
+}
+
+#header-adminPanel-cerrarsesion {
+    padding: 1rem;
+    margin-left: 1rem;
 }
 
 /**Estilos del main**/

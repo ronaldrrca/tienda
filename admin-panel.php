@@ -37,28 +37,40 @@ $rol = $_SESSION['rol_usuario'];
 <body>
     <header id="header-admin-panel">
         <a class="header-nombreTienda" href="./index.php">Mi tienda</a>
-        <div class="usuario-info">
-            <img src="./assets/imgs-site/usuario-icono.svg" alt="ícono de usuario">
-            <span><?php echo htmlspecialchars($_SESSION['admin']); ?></span>
-        </div>
-        <h1>Panel de Gestión</h1>
-        <a id="header-adminPanel-cerrarsesion" href="./backend/authentications/logout.php">Cerrar sesión</a>
-        <div class="gestiones">
-            <button onclick="cargarSeccion('gestion-usuarios.php')">Usuarios</button>
-            <button onclick="cargarSeccion('gestion-productos.php')">Productos</button>
+         
+        <?php 
+            if ($rol === 'admin' || $rol === 'superAdmin' ) { 
+        ?>
+                <div class="gestiones">
+                    <button onclick="cargarSeccion('gestion-usuarios.php')">Usuarios</button>
+                    <button onclick="cargarSeccion('gestion-productos.php')">Productos</button>
+                    <button onclick="cargarSeccion('gestion-clientes.php')">Clientes</button>
+                    <button onclick="cargarSeccion('gestion-ventas.php')">Ventas</button>
+                </div>
+                <?php } ?>
+
+            <div class="usuario-info">
+                <img src="./assets/imgs-site/usuario-icono.svg" alt="ícono de usuario">
+                <span><?php echo htmlspecialchars($_SESSION['nombre_usuario']); ?></span>
+            <a id="header-adminPanel-cerrarsesion" href="./backend/authentications/logout.php">Cerrar sesión</a>
         </div>
     </header>
 
     <main id="main-adminPanel">
-        
-        <section id="contenido-usuarios"></section>
-    
-   
+        <h1>Panel de Gestión</h1>
+    <?php 
+            if ($rol === 'admin' || $rol === 'superAdmin' ) { ?>
+               <section id="contenido-usuarios"></section>
+            <?php } else if ($rol === 'vendedor') { ?>
+                <section id="contenido-productos">
+                    <h2>Gestón de Productos</h2>
+                </section>
+            <?php } ?>
         
     </main>
     <?php include './frontend/includes-front/footer.php'?>
     <script src="frontend/js/index.js"></script>
     <script src="frontend/js/admin-panel.js"></script>
-    
+    <script src="frontend/js/gestion-usuarios.js"></script>
 </body>
 </html>

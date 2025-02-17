@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-// if (isset($_SESSION["admin"])) {
-//     // Si el usuario no está autenticado, redirigirlo a la página de login
-//     header("Location: admin-panel.php");
-//     exit();
-// }
+if (isset($_SESSION["rol_usuario"])) {
+    // Si el usuario no está autenticado, redirigirlo a la página de login
+    header("Location: admin-panel.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>

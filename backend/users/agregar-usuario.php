@@ -6,6 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario_usuario = trim($_POST['usuario']);
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
+    $rol_usuario = $_POST['rol'];
 
     
     // Validar que las contraseñas coincidan
@@ -16,9 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Encriptar la contraseña antes de guardarla
     $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
-    $query = "INSERT INTO usuarios (nombre_usuario, usuario_usuario, password_usuario) VALUES (?, ?, ?)";
+    $query = "INSERT INTO usuarios (nombre_usuario, usuario_usuario, password_usuario, rol_usuario) VALUES (?, ?, ?, ?)";
     $stmt = $conexion->prepare($query);
-    $stmt->bind_param("sss", $nombre_usuario, $usuario_usuario, $password_hash);
+    $stmt->bind_param("ssss", $nombre_usuario, $usuario_usuario, $password_hash, $rol_usuario);
 
     if ($stmt->execute()) {
         echo "Usuario registrado correctamente.";
